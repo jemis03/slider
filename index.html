@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .slider_img{
+            width: 150px;
+            height: 100px;
+            border: 2px solid #fff;
+            border-radius: 17px;
+
+        }
+        .css-slider{
+            display: block;
+            max-width: 150px;
+            max-height: 100px;
+            /* background-color: aliceblue; */
+            
+            opacity: 0.7;
+            transition: opacity 0.4s linear;
+            transform: 0.2s linear;
+            padding: 0px;
+            margin: 0px 20px;
+
+        }
+        .css-slider:hover{
+            opacity: 1;
+            transform: scale(1.2);
+        }
+        .slider-tabs{
+            /* height: 100vh; */
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            bottom: 50px;
+        }
+        .slider-container{
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            /* border: 2px solid black; */
+            min-width: 100vw;
+            min-height: 100vh;
+            /* margin: 20px; */
+            /* color: black; */
+            background-image: url(img1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top;
+           
+            /* background-color: black; */
+        }
+    </style>
+    <script>
+        function slider1(){
+            // document.getElementsByClassName('slider-container').style.backgroundImage=`url('img1.jpg')`;
+            var len=document.querySelector('#slider');
+            len.style.backgroundImage=`url('img1.jpg')`;
+            console.log(len);
+        }
+        function slider2(){
+            // document.getElementsByClassName('slider-container').style.backgroundImage=`url('img1.jpg')`;
+            var len=document.querySelector('#slider');
+            len.style.backgroundImage=`url('img2.webp')`;
+            console.log(len);
+        }
+        function slider3(){
+            // document.getElementsByClassName('slider-container').style.backgroundImage=`url('img1.jpg')`;
+            var len=document.querySelector('#slider');
+            len.style.backgroundImage=`url('img3.jfif')`;
+            console.log(len);
+        }
+        function slider4(){
+            // document.getElementsByClassName('slider-container').style.backgroundImage=`url('img1.jpg')`;
+            var len=document.querySelector('#slider');
+            len.style.backgroundImage=`url('img4.jpg')`;
+            console.log(len);
+        }
+        // let len=document.getElementsByClassName('css-slider');
+
+        // console.log(len);
+        // let len=document.getElementsByClassName('css-slider')[0].onmouseover;
+        // consol.log(len)
+
+        // ="document.getElementsByClassName('slider-container').style.background="url('img1.jpg')";";
+
+    </script>
+</head>
+<body>
+    <div class="slider-container" id="slider">
+        <section class="slider-tabs">
+            <div class="css-slider" onmouseover="slider1()" id="slider-img-1">
+                <img src="img1.jpg" alt="" class="slider_img">
+            </div>
+            <div class="css-slider" onmouseover="slider2()" id="slider-img-2">
+                <img src="img2.webp" alt="" class="slider_img">
+            </div>
+            <div class="css-slider" onmouseover="slider3()" id="slider-img-3">
+                <img src="img3.jfif" alt="" class="slider_img">
+            </div>
+            <div class="css-slider" onmouseover="slider4()" id="slider-img-4">
+                <img src="img4.jpg" alt="" class="slider_img">
+            </section>
+        </div>
+    </div>
+</body>
+</html>
